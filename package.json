@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start": "servor --reload"
+  },
+  "dependencies": {
+    "prettier": "^3.4.2",
+    "servor": "^4.0.2"
+  }
+}
