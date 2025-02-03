@@ -11,8 +11,6 @@ header {
   margin: 0 auto;
 }
 
-/* ====== STYLES APPLIED ONLY FOR TABLET SCREEN VIEW AND BLEW 1024px =======*/
-
 @media (max-width: 1024px) {
   header {
     padding: 0;
