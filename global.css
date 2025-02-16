@@ -1,7 +1,14 @@
+:export {
+  primary-color: #c70777;
+  gray-color: #abb2bf;
+  background-color: #282c33;
+  white-color: #ffffff;
+}
+
 body {
-  font-family: 'Fira Code', monospace;
+  font-family: "Fira Code", monospace;
   margin: 0;
-  background-color: var(--background);
+  background-color: #282c33;
 }
 
 h1,
@@ -10,11 +17,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--white);
+  color: #ffffff;
 }
 
 p {
-  color: var(--gray);
+  color: #abb2bf;
 }
 
 h2 {
@@ -28,19 +35,21 @@ ul {
 
 button {
   background-color: transparent;
-  border: 1px solid var(--primary);
-  color: var(--white);
+  border: 1px solid #c70777;
+  color: #ffffff;
   padding: 8px 16px;
   cursor: pointer;
   transition: background-color 0.5s ease;
 }
 
 button:hover {
-  background-color: var(--primary);
+  background-color: #c70777;
 }
 
 a {
-  color: var(--white);
+  color: #ffffff;
   cursor: pointer;
   text-decoration: none;
 }
+
+/*# sourceMappingURL=global.css.map */

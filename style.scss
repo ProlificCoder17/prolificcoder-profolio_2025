@@ -1,3 +1,4 @@
+@use "theme" as *;
 @use "mixins";
 
 $desktop-width: 1024px;
@@ -45,17 +46,17 @@ header {
       }
 
       .nav-link {
-        color: var(--gray);
+        color: $gray-color;
         text-decoration: none;
       }
 
       .nav-link[href="index.html"] {
-        color: var(--white);
+        color: $white-color
       }
 
       .nav-link::before {
         content: "";
-        color: var(--primary);
+        color: $primary-color;
         margin-right: 1px;
       }
     }
@@ -104,7 +105,7 @@ header {
     }
 
     .hero-content span {
-      color: var(--primary);
+      color: $primary-color;
     }
 
     .hero-content p {
@@ -129,14 +130,14 @@ header {
     .purple-square {
       width: 16px;
       height: 16px;
-      background-color: var(--primary);
+      background-color: $primary-color;
     }
 
     .portfolio-note-wrapper {
       @include mixins.flex-row;
       align-items: center;
       gap: 10px;
-      border: 1px solid var(--gray);
+      border: 1px solid $gray-color;
       padding: 8px;
       width: 402px;
     }
@@ -156,20 +157,20 @@ header {
     }
 
     .portfolio-note span {
-      color: var(--white);
+      color: $white-color;
       font-weight: bold;
     }
 
     /* ==== Quote section ==== */
     .quote {
       text-align: center;
-      border: 1px solid var(--gray);
+      border: 1px solid $gray-color;
       margin: 0 auto;
       position: relative;
     }
 
     .quote blockquote {
-      color: var(--white);
+      color: $white-color;
       font-size: 24px;
       padding: 32px;
       margin: 0;
@@ -179,20 +180,16 @@ header {
     .quote blockquote::after {
       content: '"';
       position: absolute;
-      color: var(--gray);
+      color: $gray-color;
       font-style: italic;
       top: -20px;
       font-size: 56px;
       font-weight: bold;
-      background-image: linear-gradient(
-        45deg,
-        var(--background),
-        var(--background)
-      );
+      background-image: linear-gradient($background-color, $background-color);
       background-size: 100% 45%;
       background: no-repeat;
     }
-
+S
     .quote blockquote::before {
       top: -20px;
       left: 20px;
@@ -205,10 +202,10 @@ header {
 
     .quote figcaption {
       position: absolute;
-      color: var(--gray);
+      color: $gray-color;
       font-size: 24px;
       padding: 16px;
-      border: 1px solid var(--gray);
+      border: 1px solid $gray-color;
       border-top: none;
       right: -1px;
     }
@@ -243,7 +240,7 @@ header {
     .social-links-line {
       width: 1px;
       height: 191px;
-      background-color: var(--primary);
+      background-color: $primary-color;
     }
 
     .social-links ul {
@@ -274,12 +271,12 @@ header {
 
     .section-header h2::before {
       content: "#";
-      color: var(--primary);
+      color: $primary-color;
     }
 
     .section-header h2::after {
       content: "";
-      background-color: var(--primary);
+      background-color: $primary-color;
       width: 500px;
       height: 1px;
       position: absolute;
@@ -295,7 +292,7 @@ header {
     }
 
     .section-header a {
-      color: var(--white);
+      color: $white-color;
       text-decoration: underline;
     }
 
@@ -313,7 +310,7 @@ header {
 
     .project-card,
     .project-card img {
-      border: 1px solid var(--gray);
+      border: 1px solid $gray-color;
     }
 
     .project-card img {
@@ -326,8 +323,8 @@ header {
       @include mixins.flex-row;
       flex-wrap: wrap;
       gap: 8px;
-      color: var(--gray);
-      border-bottom: 1px solid var(--gray);
+      color: $gray-color;
+      border-bottom: 1px solid $gray-color;
       margin: 0;
       padding: 8px;
     }
@@ -396,12 +393,12 @@ header {
     }
 
     .skill-category {
-      border: 1px solid var(--gray);
+      border: 1px solid $gray-color;
     }
 
     .skill-category h4 {
       padding: 0;
-      border-bottom: 1px solid var(--gray);
+      border-bottom: 1px solid $gray-color;
       margin: 0;
     }
 
@@ -409,7 +406,7 @@ header {
       padding: 8px;
       @include mixins.flex-row;
       gap: 8px;
-      color: var(--gray);
+      color: $gray-color;
       margin: 0;
       flex-wrap: wrap;
     }
@@ -480,7 +477,7 @@ header {
     }
 
     .contacts-card {
-      border: 1px solid var(--gray);
+      border: 1px solid $gray-color;
       padding: 16px;
     }
 
@@ -491,7 +488,7 @@ header {
     }
 
     .contact {
-      color: var(--gray);
+      color: $gray-color;
       @include mixins.flex-row;
       gap: 9px;
       align-items: center;
@@ -500,85 +497,79 @@ header {
   }
 
   /* ==== FOOTER ==== */
-
   footer {
-    border: 1px solid var(--gray);
+    border: 1px solid $gray-color;
     padding: 32px 0;
     margin-top: 145px;
 
-      @media (max-width: 480px) {
+    @media (max-width: 480px) {
       footer {
-      margin-top: 45px;
-      padding: 16px 0;
+        margin-top: 45px;
+        padding: 16px 0;
+      }
     }
-  }
 
-  .footer-container {
-    max-width: $desktop-width;
-    margin: 0 auto;
-
-   .footer-content {
-      flex-direction: column;
-      gap: 16px;
-    }
     .footer-container {
-      padding: 16px;
+      max-width: $desktop-width;
+      margin: 0 auto;
+
+      .footer-content {
+        flex-direction: column;
+        gap: 16px;
+      }
+      .footer-container {
+        padding: 16px;
+      }
     }
-  }
 
-  @media (max-width: $desktop-width) {
-    .footer-container {
-      padding: 16px;
+    @media (max-width: $desktop-width) {
+      .footer-container {
+        padding: 16px;
+      }
     }
-  }
 
-  .footer-content {
-    @include mixins.flex-row;
-    justify-content: space-between;
-  }
+    .footer-content {
+      @include mixins.flex-row;
+      justify-content: space-between;
+    }
 
-  .footer-logo {
-    @include mixins.flex-row;
-    align-items: center;
-    gap: 9px;
-  }
+    .footer-logo {
+      @include mixins.flex-row;
+      align-items: center;
+      gap: 9px;
+    }
 
-  .footer-logo h4 {
-    margin: 0;
-  }
+    .footer-logo h4 {
+      margin: 0;
+    }
 
-  .footer-media h3 {
-    margin-bottom: 12px;
-    margin-top: 0;
-    font-size: 24px;
-    font-weight: 500;
-  }
+    .footer-media h3 {
+      margin-bottom: 12px;
+      margin-top: 0;
+      font-size: 24px;
+      font-weight: 500;
+    }
 
-  .footer-logo-wrapper {
-    @include mixins.flex-row;
-    align-items: center;
-    gap: 24px;
-  }
+    .footer-logo-wrapper {
+      @include mixins.flex-row;
+      align-items: center;
+      gap: 24px;
+    }
 
-  .footer-logo-wrapper a {
-    color: var(--gray);
-    transition: color 0.5s ease;
-  }
+    .footer-logo-wrapper a {
+      color: $gray-color;
+      transition: color 0.5s ease;
+    }
 
-  .footer-logo-wrapper a:hover {
-    color: var(--white);
-    margin-top: 16px;
-  }
+    .footer-logo-wrapper a:hover {
+      color: $white-color;
+      margin-top: 16px;
+    }
 
-  .copyright {
-    text-align: center;
-    margin-top: 48px;
-    margin-bottom: 32px;
+    .copyright {
+      text-align: center;
+      margin-top: 48px;
+      margin-bottom: 32px;
+    }
   }
 }
-}
-
-
-
-
-
